@@ -2,6 +2,10 @@
 
 A simple dApp to be used for educational purposes alongside an introductory workshop on programming trust.
 
+This dApp has two goals:
+- To show a simple full stack Solidity dapp that uses hardhat and is configured to deploy on Passet Hub
+- To be used as a way to directly engage with workshop attendees in a more hands-on way either as a main focus of a workshop or alongside a presentation
+
 ## How it works
 
 - Register your attendance on-chain for 0.1 PAS
