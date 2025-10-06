@@ -13,7 +13,7 @@ This dApp has two goals:
 - Receive exclusive workshop completion NFT after the session
 - Verifiable proof of participation for your portfolio/resume
 
-The workshop facilitator must show the dApp UI on the projector and invite students to register before they begin their workshop.
+Before they begin the workshop, the facilitator must show the dApp UI on the projector and invite students to register during the course of the workshop. This will allow participants to learn how to create a wallet, get testnet tokens and see a working dApp in action if they haven't already.
 
 Note: there is an intentional flaw in the contract code which at the end of the workshop the facilitator must point out.
 
