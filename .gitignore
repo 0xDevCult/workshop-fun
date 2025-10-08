@@ -1,0 +1,52 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+*.tsbuildinfo
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Hardhat
+cache/
+cache-pvm/
+artifacts/
+artifacts-pvm/
+typechain-types/
+coverage/
+coverage.json
+
+# Hardhat Ignition deployments (keep deployed_addresses.json)
+ignition/deployments/*/journal.jsonl
+ignition/deployments/*/build-info/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Testing
+.nyc_output/
+
+# Misc
+.cache/
+temp/
+tmp/
