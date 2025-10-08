@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useAccount, useReadContract, useWriteContract, useWaitForTransactionReceipt } from '@wagmi/vue'
-import { computed, ref, watch } from 'vue'
+import { computed, watch } from 'vue'
 import { blo } from 'blo'
 import { formatTime, shortenAddress } from '../utils/formatters'
 import { MESSAGE_BOARD_ADDRESS, MessageBoardABI, CONTRACT_FUNCTIONS } from '../config/contracts'
@@ -22,10 +22,10 @@ const { writeContract, data: writeData, isPending: isUpvoting, error: upvoteErro
 // Check if user has already upvoted this message
 const { data: hasUpvotedData } = useReadContract({
   abi: MessageBoardABI,
-  address: MESSAGE_BOARD_ADDRESS as `0x${string}`,
+  address: computed(() => MESSAGE_BOARD_ADDRESS as `0x${string}`),
   functionName: CONTRACT_FUNCTIONS.HAS_USER_UPVOTED,
-  args: [BigInt(props.message.id), address],
-  enabled: computed(() => !!address && isConnected.value),
+  args: computed(() => [BigInt(props.message.id), address.value]),
+  enabled: computed(() => !!address.value && isConnected.value),
 })
 
 // Wait for transaction confirmation

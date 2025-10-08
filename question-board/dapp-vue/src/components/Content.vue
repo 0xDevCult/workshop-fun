@@ -6,7 +6,7 @@ import { shortenAddress } from '../utils/formatters'
 import MessageCard from './MessageCard.vue'
 
 // Account and contract hooks
-const { address, isConnected } = useAccount()
+const { isConnected } = useAccount()
 const { writeContract, data: writeData, isPending: isWritePending, error: writeError } = useWriteContract()
 
 // Common contract config
@@ -100,7 +100,7 @@ async function handlePostMessage() {
 }
 
 // Handle upvote event from MessageCard
-function handleMessageUpvoted(messageId: number) {
+function handleMessageUpvoted(_messageId: number) {
   // Refresh both all messages and top upvoted messages
   refetchMessages()
   refetchTopUpvoted()

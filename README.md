@@ -1,27 +1,107 @@
-# Workshop Attendance Registry
+# Question Board dApp
 
-A simple dApp to be used for educational purposes alongside an introductory workshop on programming trust.
+A decentralized question board built on Polkadot, where users can post questions and upvote posts from the community.
 
-This dApp has two goals:
-- To show a simple full stack Solidity dapp that uses hardhat and is configured to deploy on Passet Hub
-- To be used as a way to directly engage with workshop attendees in a more hands-on way either as a main focus of a workshop or alongside a presentation
+## 🌐 Live Demo
 
-## How it works
+**🔗 [Launch the dApp](https://0xdevcult.github.io/workshop-attendance-dapp/)**
 
-- Register your attendance on-chain for 0.1 PAS
-- Your wallet address is permanently recorded as a workshop attendee
-- Receive exclusive workshop completion NFT after the session
-- Verifiable proof of participation for your portfolio/resume
+## 🚀 Features
 
-Before they begin the workshop, the facilitator must show the dApp UI on the projector and invite students to register during the course of the workshop. This will allow participants to learn how to create a wallet, get testnet tokens and see a working dApp in action if they haven't already.
+- **Post Questions**: Submit questions to the community
+- **Upvote System**: Vote on questions you find helpful
+- **Top Questions**: See the most upvoted questions
+- **Polkadot Integration**: Built on Polkadot Asset Hub Testnet
+- **Modern UI**: Beautiful interface with Tailwind CSS + DaisyUI
 
-Note: there is an intentional flaw in the contract code which at the end of the workshop the facilitator must point out.
+## 🛠️ Tech Stack
 
-### Workshop flow
+- **Frontend**: Vue 3 + TypeScript + Vite
+- **Blockchain**: Polkadot Asset Hub Testnet
+- **Smart Contract**: Solidity with Hardhat
+- **Styling**: Tailwind CSS + DaisyUI
+- **Web3**: Wagmi + Viem
 
-- Deploy contract to testnet with 0.1 PAS fee and host front-end somewhere
-- Students register → see their address in `attendeeList[]` via block explorer
-- Contract balance grows from deposits → visible and verifiable
-- At reveal: Call `distributeNFT()` or `batchDistributeNFTs()`
-- All funds transfer to contract owners' address in one transaction
-- Show the code and explain the exploit
+## 📱 Screenshots
+
+The dApp features a clean, modern interface with:
+- DevCult branding and navigation
+- Question posting form
+- Real-time upvote functionality
+- Top upvoted questions sidebar
+- Wallet integration for Polkadot
+
+## 🏗️ Smart Contract
+
+**Contract Address**: `0x0c626FC4A447b01554518550e30600136864640B`  
+**Network**: Polkadot Asset Hub Testnet
+
+### Functions
+- `postMessage(string content)` - Post a new question
+- `upvoteMessage(uint256 messageIndex)` - Upvote a question
+- `getAllMessages()` - Get all questions
+- `getTopUpvotedMessages(uint256 count)` - Get top upvoted questions
+- `hasUserUpvoted(uint256 messageIndex, address user)` - Check if user upvoted
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 18+
+- npm or yarn
+- MetaMask or Polkadot wallet
+
+### Local Development
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/0xDevCult/workshop-attendance-dapp.git
+   cd workshop-attendance-dapp/question-board
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start development server**
+   ```bash
+   npm run dev -w dapp-vue
+   ```
+
+4. **Deploy smart contract** (optional)
+   ```bash
+   npm run deploy -w hardhat
+   ```
+
+### Using the dApp
+
+1. **Connect Wallet**: Click "Connect Wallet" and connect your Polkadot wallet
+2. **Get Test Tokens**: Use the Polkadot Asset Hub faucet to get test PAS tokens
+3. **Post Questions**: Write your question and click "Post Question"
+4. **Upvote**: Click the upvote button on questions you like
+5. **View Top Questions**: Check the "Top Upvoted Posts" sidebar
+
+## 📚 Resources
+
+- [Polkadot Documentation](https://docs.polkadot.com/develop/)
+- [Vue.js Guide](https://vuejs.org/guide/)
+- [Wagmi Documentation](https://wagmi.sh/)
+- [Hardhat Documentation](https://hardhat.org/docs)
+
+## 🤝 Contributing
+
+We welcome contributions! Please feel free to submit a Pull Request.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- Built by [DevCult](https://devcult.io/)
+- Powered by [Polkadot](https://polkadot.network/)
+- Created with [create-dot-app](https://github.com/preschian/create-dot-app)
+
+---
+
+**🔗 [Launch the dApp](https://0xdevcult.github.io/workshop-attendance-dapp/)**
