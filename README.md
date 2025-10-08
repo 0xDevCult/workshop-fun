@@ -4,7 +4,7 @@ A decentralized question board built on Polkadot, where users can post questions
 
 ## 🌐 Live Demo
 
-**🔗 [Launch the dApp](https://0xdevcult.github.io/workshop-attendance-dapp/)**
+**🔗 [Launch the dApp](https://0xdevcult.github.io/workshop-fun/)**
 
 ## 🚀 Features
 
@@ -104,4 +104,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**🔗 [Launch the dApp](https://0xdevcult.github.io/workshop-attendance-dapp/)**
+**🔗 [Launch the dApp](https://0xdevcult.github.io/workshop-fun/)**
