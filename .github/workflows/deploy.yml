@@ -47,13 +47,13 @@ jobs:
       - name: Build frontend
         run: |
           cd question-board/dapp-vue
-          npm run build
+          NODE_ENV=production npm run build
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload dist directory from the dapp-vue workspace
-          path: 'question-board/dapp-vue/dist'
+          path: './question-board/dapp-vue/dist'
 
   # Deployment job
   deploy:
